@@ -234,3 +234,63 @@ for (let i=1; i<= 10; i++) {
     console.log(i)
 }
 console.log(`__________________`)
+
+function makeACoffee() {
+    console.log("Turn on te Gas stove with lighter");
+    console.log("Put a pan on the stove");
+    console.log("Add some water to the pan");
+    console.log("Add coffee powder to the boiling water");
+    console.log("Add some sugar to the coffee");
+    console.log("Add milk to the coffee");
+    console.log("Wait for 2 or 3 minutes");
+    console.log("Turn off the stove and serve the coffee in a cup");
+}
+
+
+makeACoffee (true,true);
+console.log(`__________________`)
+makeACoffee (true,true);
+console.log(`__________________`)
+makeACoffee (true,true);
+console.log(`__________________`)
+makeACoffee (true,true);
+console.log(`__________________`)
+makeACoffee (true,true);
+console.log(`__________________`)
+makeACoffee (true,true);
+console.log(`__________________`)
+
+
+function makeACoffee(isSugarNeeded,isMilkNeeded) {
+    console.log("Turn on te Gas stove with lighter");
+    console.log("Put a pan on the stove");
+    console.log("Add some water to the pan");
+    console.log("Add coffee powder to the boiling water");
+      if (isSugarNeeded) {
+    console.log("Add some sugar to the coffee");
+      }
+      if (isMilkNeeded) {
+    console.log("Add milk to the coffee");
+      }
+    console.log("Wait for 2 or 3 minutes");
+    console.log("Turn off the stove and serve the coffee in a cup");
+}
+
+makeACoffee (false,false);
+console.log(`__________________`)
+
+function addTwoNumbers (number1,number2) {
+    let sum = number1 + number2
+    return sum;
+}
+
+let result = addTwoNumbers (5,10);
+console.log(`The sum of 5 and 10 is${result}`)
+
+// Function Expression
+const myName = function () {
+    return "Parthiv"
+}
+console.log(`My name is ${myName()}`);
+console.log(`__________________`)
+
