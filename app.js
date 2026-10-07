@@ -294,3 +294,39 @@ const myName = function () {
 console.log(`My name is ${myName()}`);
 console.log(`__________________`)
 
+// function double(n) {
+//     return n*2;
+// }
+
+// const double=function (n) {
+//     return n*2;
+// }
+
+// const double = (n) => {
+//     return n*2;
+// }
+
+const doubleTheNumber = (n) => n*2;
+console.log (`Double of 5 is: ${doubleTheNumber(5)}`)
+
+const divide =() => 10/3;
+console.log (`Division of 10 by 3 is: ${divide ()}`)
+
+function calculateBillOne(itemPrice,quantity) {
+    return itemPrice*quantity
+}
+console.log (`The first bill is: ${calculateBillOne (100,5)}`)
+
+const  calculateBillTwo=(itemPrice,quantity) => itemPrice*quantity;
+console.log (`The second bill is: ${calculateBillTwo (100,2)}`)
+
+const totalBillValue = (itemPrice, quantity, tax, discount) => (itemPrice*quantity)+tax-discount
+console.log (`The Total Bill is: ${totalBillValue (100,2,50,10)}`)
+
+const greet = (name = "Friend") => {
+    return `Hello, ${name}`;
+}
+console.log(greet("")); 
+console.log(greet("parthiv"));
+console.log(`__________________`)
+
