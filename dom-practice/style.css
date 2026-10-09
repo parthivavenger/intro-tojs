@@ -1,0 +1,22 @@
+.highLight {
+    background-color: rgb(240, 224, 10);
+    color: rgb(250, 12, 32);
+}
+
+#siteNav {
+    display: none;
+}
+
+#siteNav.nav-open {
+    display: flex;
+    flex-direction: column;
+}
+
+.darkMode {
+    background-color: #1a1a1a;
+    color: #f0f0f0
+}
+
+.darkMode a{
+    color: #8ab48a;
+} 
