@@ -48,14 +48,50 @@
 
         <div id="box"></div>
 
-        <lable for="message">Message</lable>
-        <textarea id="message" maxlength="200"></textarea>
+        <lable for="message1">Message</lable>
+        <textarea id="message1" maxlength="200"></textarea>
         <p id="charcount">0/200</p>
         <ul id="snackList"></ul>
-        <ul id="proJect"></ul>
+        <ul id="proJect" class="p1"></ul>
+
+
+
+        <section class="projects-section">
+            <h2>My portfolio</h2>
+            <div id ="filterButton"></div>
+            <div id="projectGrid"></div>
+        </section>
+
+
+        <form id="contact-form"novalidata>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <span class="error-message" id="name-error">Please enter your name</span>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="email-error">Please enter your email</span>
+            </div>
+
+            <div class="field">
+                <label for="message">Message</label>
+                <input id="message" name="message" rows="4">
+                <span class="error-message" id="message-error">Please enter a message</span>
+            </div>
+
+            <button type="submit">Send Message</button>
+            <p id="form-success" class="success-message"></p>
+        </form>
+
+
         <footer>
             &copy; <span id="year">2022 </span> My Portfolio
         </footer>
+
+
 </body>
 
 </html>

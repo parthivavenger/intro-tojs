@@ -20,3 +20,22 @@
 .darkMode a{
     color: #8ab48a;
 } 
+
+.p1 {
+    background-color: aqua;
+    font-size: large;
+}
+
+.error-message {
+    display: none;
+    color: #c0392b;
+    font-size: 14px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.success-message {
+    color: #1e8449;
+}
