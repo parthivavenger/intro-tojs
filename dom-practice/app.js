@@ -534,60 +534,81 @@ contactForm.addEventListener(`submit`, function (event) {
   const message = document.querySelector(`#message`).value.trim();
   const formSuccess = document.querySelector(`#form-success`);
 
-  const isFormValid = formValdiation(name, email, message);
-  if (!isFormValid) {
+  const isFormValid = formValidation(name, email, message);
+   if (!isFormValid) {
     formSuccess.textContent = "";
-    return;
-  }
+    return; 
+   }
 
-  const storageKey = "contactFormSubmissions";
-  const submissions = JSON.parse(localStorage.getItem(storageKey) || "[]");
-  submissions.push({ name, email, message });
-  localStorage.setItem(storageKey, JSON.stringify(submissions));
-  formSuccess.textContent = "Your message has been saved";
-});
+const storageKey = "contactFormSubmission";
+const submissions = JSON.parse (
+    localStorage.getItem(storageKey) || [],
 
-function isEmailValid(value) {
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailPattern.test(value);
-}
-console.log(isEmailValid("shantan@rediffmail.com"));
-
-function showError(fieldId, show) {
-  const errorElement = document.querySelector(`#${fieldId}-error`);
-  errorElement.classList.toggle(`show`, show);
-}
-
-function formValdiation(name, email, message) {
-  let isValid = true;
-
-  if (name === "") {
-    showError("name", true);
-    isValid = false;
-  } else {
-    showError("name", false);
-  }
-
-  if (email === "" || !isEmailValid(email)) {
-    showError("email", true);
-    isValid = false;
-  } else {
-    showError("email", false);
-  }
-
-  if (message === "") {
-    showError("message", true);
-    isValid = false;
-  } else {
-    showError("message", false);
-  }
-
-  return isValid;
-}
+)
+submissions.push({name,email,message})
+localStorage.setItem(storageKey,JSON.stringify(submissions))
+formSuccess.textContant = "your messege have been sent"
 
 
 
+//   let isFormValid = formValidation(name, email, message)
 
+//    console.log(`isFormValidation; ${isFormValid}`)
+
+//    if (isFormValid) {
+//     const message = JSON.parse(localStorage.getItem('messages')) || [];
+//     message.push({name, email, message});
+//     localStorage.setItem('messages', JSON.stringify(messages));
+//     console.log(messages)
+   
+
+   
+ })
+
+//   const storageKey = "contactFormSubmissions";
+//   const submissions = JSON.parse(localStorage.getItem(storageKey) || "[]");
+//   submissions.push({ name, email, message });
+//   localStorage.setItem(storageKey, JSON.stringify(submissions));
+//   formSuccess.textContent = "Your message has been sent";
+// });
+
+// function isEmailValid(value) {
+//   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//   return emailPattern.test(value);
+// }
+// console.log(isEmailValid("shantan@rediffmail.com"));
+
+// function showError(fieldId, show) {
+//   const errorElement = document.querySelector(`#${fieldId}-error`);
+//   errorElement.classList.toggle(`show`, show);
+// }
+
+// function formValdiation(name, email, message) {
+//   let isValid = true;
+
+//   if (name === "") {
+//     showError("name", true);
+//     isValid = false;
+//   } else {
+//     showError("name", false);
+//   }
+
+//   if (email === "" || !isEmailValid(email)) {
+//     showError("email", true);
+//     isValid = false;
+//   } else {
+//     showError("email", false);
+//   }
+
+//   if (message === "") {
+//     showError("message", true);
+//     isValid = false;
+//   } else {
+//     showError("message", false);
+//   }
+
+//   return isValid;
+// }
 
 
 
