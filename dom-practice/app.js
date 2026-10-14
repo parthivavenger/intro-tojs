@@ -524,11 +524,66 @@ localStorage.setItem('fav', JSON.stringify(favourites))
 console.log(localStorage.getItem('fav'));
 console.log(JSON.parse(localStorage.getItem('fav')).favsport)
 
+// home work
 
 
+contactForm.addEventListener(`submit`, function (event) {
+  event.preventDefault();
+  const name = document.querySelector(`#name`).value.trim();
+  const email = document.querySelector(`#email`).value.trim();
+  const message = document.querySelector(`#message`).value.trim();
+  const formSuccess = document.querySelector(`#form-success`);
 
+  const isFormValid = formValdiation(name, email, message);
+  if (!isFormValid) {
+    formSuccess.textContent = "";
+    return;
+  }
 
+  const storageKey = "contactFormSubmissions";
+  const submissions = JSON.parse(localStorage.getItem(storageKey) || "[]");
+  submissions.push({ name, email, message });
+  localStorage.setItem(storageKey, JSON.stringify(submissions));
+  formSuccess.textContent = "Your message has been saved";
+});
 
+function isEmailValid(value) {
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailPattern.test(value);
+}
+console.log(isEmailValid("shantan@rediffmail.com"));
+
+function showError(fieldId, show) {
+  const errorElement = document.querySelector(`#${fieldId}-error`);
+  errorElement.classList.toggle(`show`, show);
+}
+
+function formValdiation(name, email, message) {
+  let isValid = true;
+
+  if (name === "") {
+    showError("name", true);
+    isValid = false;
+  } else {
+    showError("name", false);
+  }
+
+  if (email === "" || !isEmailValid(email)) {
+    showError("email", true);
+    isValid = false;
+  } else {
+    showError("email", false);
+  }
+
+  if (message === "") {
+    showError("message", true);
+    isValid = false;
+  } else {
+    showError("message", false);
+  }
+
+  return isValid;
+}
 
 
 
