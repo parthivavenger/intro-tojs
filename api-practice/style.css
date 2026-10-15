@@ -1,0 +1,41 @@
+.github-Card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.github-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.abc {
+    display: flex;
+    gap: 20px;
+}
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.abcd {
+    background-color: bisque;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+p {
+    font-size: larger;
+}
